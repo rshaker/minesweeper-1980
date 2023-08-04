@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A302E0242458C45600B61B37 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302E0222458C45500B61B37 /* Board.swift */; };
+		A302E0252458C45600B61B37 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302E0232458C45600B61B37 /* Tile.swift */; };
+		A302E0282458C45C00B61B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302E0262458C45B00B61B37 /* AppDelegate.swift */; };
+		A302E02B2458C88D00B61B37 /* TileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302E02A2458C88D00B61B37 /* TileButton.swift */; };
+		A3208C9A2572F370005497D7 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3208C992572F370005497D7 /* InfoView.swift */; };
+		A33C183225223B0A0003628E /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C183125223B0A0003628E /* SoundService.swift */; };
+		A34B01112523E3240037FAA4 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = A34B01102523E3240037FAA4 /* sounds */; };
+		A34CFC96250044F300726A74 /* ShortTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34CFC95250044F300726A74 /* ShortTapGestureRecognizer.swift */; };
+		A34F4BF024B5280300353A44 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F4BEF24B5280300353A44 /* Constants.swift */; };
+		A3719B69249A5F39008BE082 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3719B68249A5F39008BE082 /* SceneDelegate.swift */; };
+		A38D4D3225097E2300CAD7A7 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38D4D3125097E2300CAD7A7 /* Stack.swift */; };
+		A39BA14F265575D9008CA1B1 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BA14E265575D9008CA1B1 /* BoardViewController.swift */; };
+		A39F25FD24CF59E000E70E0D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39F25FC24CF59E000E70E0D /* InfoViewController.swift */; };
+		A3B235B224D06106003BA5D6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A3B235B024D06106003BA5D6 /* README.md */; };
+		A3BADDDB244E262300B96651 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A3BADDDA244E262300B96651 /* Settings.bundle */; };
+		A3CBE677249BE05C0010DDB9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CBE676249BE05C0010DDB9 /* Extensions.swift */; };
+		A3CBE679249D1F6E0010DDB9 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CBE678249D1F6E0010DDB9 /* SettingsService.swift */; };
+		A3CDC34124B4234C0092D4FE /* GameboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CDC34024B4234C0092D4FE /* GameboardView.swift */; };
+		A3E2DA9A24C6087200037F06 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2DA9924C6087200037F06 /* Util.swift */; };
+		A3E7FFA125444A48006628A9 /* LayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E7FFA025444A48006628A9 /* LayerView.swift */; };
+		A3E7FFA425444C25006628A9 /* CloudLayerSKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E7FFA325444C25006628A9 /* CloudLayerSKView.swift */; };
+		A3E7FFA725444F17006628A9 /* CenteringUIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E7FFA625444F17006628A9 /* CenteringUIScrollView.swift */; };
+		A3EC94AA24425632006FF952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC94A824425632006FF952 /* Main.storyboard */; };
+		A3EC94AC24425634006FF952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EC94AB24425634006FF952 /* Assets.xcassets */; };
+		A3EC94AF24425634006FF952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC94AD24425634006FF952 /* LaunchScreen.storyboard */; };
+		A3EC94B924426B05006FF952 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC94B824426B05006FF952 /* SettingsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A302E0222458C45500B61B37 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		A302E0232458C45600B61B37 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		A302E0262458C45B00B61B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A302E02A2458C88D00B61B37 /* TileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileButton.swift; sourceTree = "<group>"; };
+		A302E02C2458CC5600B61B37 /* minesweeper-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "minesweeper-ios.entitlements"; sourceTree = "<group>"; };
+		A3208C992572F370005497D7 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		A33C183125223B0A0003628E /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		A34B01102523E3240037FAA4 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
+		A34CFC95250044F300726A74 /* ShortTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		A34F4BEF24B5280300353A44 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A3719B68249A5F39008BE082 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A38D4D3125097E2300CAD7A7 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		A39BA14E265575D9008CA1B1 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		A39F25FC24CF59E000E70E0D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		A3B235B024D06106003BA5D6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A3BADDDA244E262300B96651 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "minesweeper-ios/Settings.bundle"; sourceTree = "<group>"; };
+		A3CBE676249BE05C0010DDB9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A3CBE678249D1F6E0010DDB9 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		A3CDC34024B4234C0092D4FE /* GameboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameboardView.swift; sourceTree = "<group>"; };
+		A3E2DA9924C6087200037F06 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		A3E7FFA025444A48006628A9 /* LayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerView.swift; sourceTree = "<group>"; };
+		A3E7FFA325444C25006628A9 /* CloudLayerSKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudLayerSKView.swift; sourceTree = "<group>"; };
+		A3E7FFA625444F17006628A9 /* CenteringUIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteringUIScrollView.swift; sourceTree = "<group>"; };
+		A3EC949F24425631006FF952 /* minesweeper-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "minesweeper-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3EC94A924425632006FF952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3EC94AB24425634006FF952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3EC94AE24425634006FF952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A3EC94B024425634006FF952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3EC94B824426B05006FF952 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3EC949C24425631006FF952 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3EC949624425631006FF952 = {
+			isa = PBXGroup;
+			children = (
+				A3B235B024D06106003BA5D6 /* README.md */,
+				A3BADDDA244E262300B96651 /* Settings.bundle */,
+				A3EC94A124425631006FF952 /* minesweeper-ios */,
+				A3EC94A024425631006FF952 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3EC94A024425631006FF952 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC949F24425631006FF952 /* minesweeper-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3EC94A124425631006FF952 /* minesweeper-ios */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC94B024425634006FF952 /* Info.plist */,
+				A302E02C2458CC5600B61B37 /* minesweeper-ios.entitlements */,
+				A3EC94AD24425634006FF952 /* LaunchScreen.storyboard */,
+				A3EC94A824425632006FF952 /* Main.storyboard */,
+				A302E0262458C45B00B61B37 /* AppDelegate.swift */,
+				A39BA14E265575D9008CA1B1 /* BoardViewController.swift */,
+				A39F25FC24CF59E000E70E0D /* InfoViewController.swift */,
+				A3EC94B824426B05006FF952 /* SettingsViewController.swift */,
+				A3EC94AB24425634006FF952 /* Assets.xcassets */,
+				A34B01102523E3240037FAA4 /* sounds */,
+				A302E0222458C45500B61B37 /* Board.swift */,
+				A3E7FFA625444F17006628A9 /* CenteringUIScrollView.swift */,
+				A3E7FFA325444C25006628A9 /* CloudLayerSKView.swift */,
+				A34F4BEF24B5280300353A44 /* Constants.swift */,
+				A3CBE676249BE05C0010DDB9 /* Extensions.swift */,
+				A3CDC34024B4234C0092D4FE /* GameboardView.swift */,
+				A3208C992572F370005497D7 /* InfoView.swift */,
+				A3E7FFA025444A48006628A9 /* LayerView.swift */,
+				A3719B68249A5F39008BE082 /* SceneDelegate.swift */,
+				A3CBE678249D1F6E0010DDB9 /* SettingsService.swift */,
+				A34CFC95250044F300726A74 /* ShortTapGestureRecognizer.swift */,
+				A33C183125223B0A0003628E /* SoundService.swift */,
+				A38D4D3125097E2300CAD7A7 /* Stack.swift */,
+				A302E0232458C45600B61B37 /* Tile.swift */,
+				A302E02A2458C88D00B61B37 /* TileButton.swift */,
+				A3E2DA9924C6087200037F06 /* Util.swift */,
+			);
+			path = "minesweeper-ios";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3EC949E24425631006FF952 /* minesweeper-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3EC94B324425634006FF952 /* Build configuration list for PBXNativeTarget "minesweeper-ios" */;
+			buildPhases = (
+				A3EC949B24425631006FF952 /* Sources */,
+				A3EC949C24425631006FF952 /* Frameworks */,
+				A3EC949D24425631006FF952 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "minesweeper-ios";
+			productName = "minesweeper-ios";
+			productReference = A3EC949F24425631006FF952 /* minesweeper-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3EC949724425631006FF952 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = "Ronald Shaker";
+				TargetAttributes = {
+					A3EC949E24425631006FF952 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = A3EC949A24425631006FF952 /* Build configuration list for PBXProject "minesweeper-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3EC949624425631006FF952;
+			productRefGroup = A3EC94A024425631006FF952 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3EC949E24425631006FF952 /* minesweeper-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3EC949D24425631006FF952 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3BADDDB244E262300B96651 /* Settings.bundle in Resources */,
+				A34B01112523E3240037FAA4 /* sounds in Resources */,
+				A3EC94AF24425634006FF952 /* LaunchScreen.storyboard in Resources */,
+				A3B235B224D06106003BA5D6 /* README.md in Resources */,
+				A3EC94AC24425634006FF952 /* Assets.xcassets in Resources */,
+				A3EC94AA24425632006FF952 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3EC949B24425631006FF952 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E7FFA425444C25006628A9 /* CloudLayerSKView.swift in Sources */,
+				A302E0282458C45C00B61B37 /* AppDelegate.swift in Sources */,
+				A302E02B2458C88D00B61B37 /* TileButton.swift in Sources */,
+				A3CDC34124B4234C0092D4FE /* GameboardView.swift in Sources */,
+				A33C183225223B0A0003628E /* SoundService.swift in Sources */,
+				A3E7FFA125444A48006628A9 /* LayerView.swift in Sources */,
+				A302E0242458C45600B61B37 /* Board.swift in Sources */,
+				A302E0252458C45600B61B37 /* Tile.swift in Sources */,
+				A3208C9A2572F370005497D7 /* InfoView.swift in Sources */,
+				A3CBE677249BE05C0010DDB9 /* Extensions.swift in Sources */,
+				A3E2DA9A24C6087200037F06 /* Util.swift in Sources */,
+				A3719B69249A5F39008BE082 /* SceneDelegate.swift in Sources */,
+				A3EC94B924426B05006FF952 /* SettingsViewController.swift in Sources */,
+				A39F25FD24CF59E000E70E0D /* InfoViewController.swift in Sources */,
+				A3E7FFA725444F17006628A9 /* CenteringUIScrollView.swift in Sources */,
+				A34CFC96250044F300726A74 /* ShortTapGestureRecognizer.swift in Sources */,
+				A3CBE679249D1F6E0010DDB9 /* SettingsService.swift in Sources */,
+				A38D4D3225097E2300CAD7A7 /* Stack.swift in Sources */,
+				A34F4BF024B5280300353A44 /* Constants.swift in Sources */,
+				A39BA14F265575D9008CA1B1 /* BoardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A3EC94A824425632006FF952 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3EC94A924425632006FF952 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A3EC94AD24425634006FF952 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3EC94AE24425634006FF952 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3EC94B124425634006FF952 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A3EC94B224425634006FF952 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3EC94B424425634006FF952 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "minesweeper-ios/minesweeper-ios.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 48BTHFA8TP;
+				INFOPLIST_FILE = "minesweeper-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Minesweeper;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boilerfish.minesweeper-gorya";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A3EC94B524425634006FF952 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "minesweeper-ios/minesweeper-ios.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 48BTHFA8TP;
+				INFOPLIST_FILE = "minesweeper-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Minesweeper;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boilerfish.minesweeper-gorya";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3EC949A24425631006FF952 /* Build configuration list for PBXProject "minesweeper-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3EC94B124425634006FF952 /* Debug */,
+				A3EC94B224425634006FF952 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3EC94B324425634006FF952 /* Build configuration list for PBXNativeTarget "minesweeper-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3EC94B424425634006FF952 /* Debug */,
+				A3EC94B524425634006FF952 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3EC949724425631006FF952 /* Project object */;
+}

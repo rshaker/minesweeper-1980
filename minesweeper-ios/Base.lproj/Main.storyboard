@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uqf-2z-IfC">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Board-->
+        <scene sceneID="Qlk-SY-afs">
+            <objects>
+                <viewController id="i17-XS-035" userLabel="Board" customClass="BoardViewController" customModule="minesweeper_gorya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jlu-fI-bBn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i5m-CC-cln" userLabel="Scoreboard Stack">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWQ-Qr-Erq" userLabel="Flags Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9x-0Q-j4r" userLabel="Flag Button">
+                                        <rect key="frame" x="83" y="0.0" width="82.5" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="🧹"/>
+                                        <connections>
+                                            <action selector="modeButtonAction:" destination="i17-XS-035" eventType="touchUpInside" id="lew-Gq-7dO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPp-4S-S4y" userLabel="Emoji Button">
+                                        <rect key="frame" x="165.5" y="0.0" width="83" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="🙂"/>
+                                        <connections>
+                                            <action selector="emojiButtonAction:" destination="i17-XS-035" eventType="touchUpInside" id="G6N-Wd-iEB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dno-fR-Mxm" userLabel="Undo Button">
+                                        <rect key="frame" x="248.5" y="0.0" width="82.5" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="↩"/>
+                                        <connections>
+                                            <action selector="undoButtonAction:" destination="i17-XS-035" eventType="touchUpInside" id="thi-Kx-5ea"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hon-p3-6c3" userLabel="Clock Label">
+                                        <rect key="frame" x="331" y="0.0" width="83" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="uMv-GE-nfV"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pry-xV-gsK" userLabel="Gameboard View">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                            </view>
+                            <skView alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36O-Ld-Vpz" customClass="LayerSKView" customModule="minesweeper_gorya" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                            </skView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VbR-zx-lDp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i5m-CC-cln" firstAttribute="trailing" secondItem="VbR-zx-lDp" secondAttribute="trailing" id="0et-Pb-49X"/>
+                            <constraint firstItem="pry-xV-gsK" firstAttribute="trailing" secondItem="VbR-zx-lDp" secondAttribute="trailing" id="1fN-22-tFN"/>
+                            <constraint firstItem="i5m-CC-cln" firstAttribute="top" secondItem="VbR-zx-lDp" secondAttribute="top" id="5AY-9V-Pua"/>
+                            <constraint firstItem="36O-Ld-Vpz" firstAttribute="leading" secondItem="VbR-zx-lDp" secondAttribute="leading" id="7W0-2M-2Gf"/>
+                            <constraint firstItem="VbR-zx-lDp" firstAttribute="bottom" secondItem="36O-Ld-Vpz" secondAttribute="bottom" id="IZT-d4-7ax"/>
+                            <constraint firstItem="i5m-CC-cln" firstAttribute="leading" secondItem="VbR-zx-lDp" secondAttribute="leading" id="OWG-HA-LUr"/>
+                            <constraint firstItem="36O-Ld-Vpz" firstAttribute="top" secondItem="i5m-CC-cln" secondAttribute="bottom" id="TgC-N4-wkK"/>
+                            <constraint firstItem="pry-xV-gsK" firstAttribute="top" secondItem="i5m-CC-cln" secondAttribute="bottom" id="a17-rQ-cJv"/>
+                            <constraint firstItem="VbR-zx-lDp" firstAttribute="trailing" secondItem="36O-Ld-Vpz" secondAttribute="trailing" id="mY9-ox-ggv"/>
+                            <constraint firstItem="pry-xV-gsK" firstAttribute="leading" secondItem="VbR-zx-lDp" secondAttribute="leading" id="nJh-pK-ouy"/>
+                            <constraint firstItem="pry-xV-gsK" firstAttribute="bottom" secondItem="VbR-zx-lDp" secondAttribute="bottom" id="oib-Y2-vcx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Board" image="grid-ms" id="nGf-lF-m0m" userLabel="Board"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clockLabelOutlet" destination="Hon-p3-6c3" id="079-dW-UrN"/>
+                        <outlet property="emojiButtonOutlet" destination="cPp-4S-S4y" id="RG1-9D-18c"/>
+                        <outlet property="flagsLabelOutlet" destination="PWQ-Qr-Erq" id="9Sb-eZ-EIW"/>
+                        <outlet property="gameboardViewOutlet" destination="pry-xV-gsK" id="xmd-HK-Tp7"/>
+                        <outlet property="layerOutlet" destination="36O-Ld-Vpz" id="7dW-Nd-JTt"/>
+                        <outlet property="modeButtonOutlet" destination="U9x-0Q-j4r" id="bUL-ny-z14"/>
+                        <outlet property="undoButtonOutlet" destination="Dno-fR-Mxm" id="XeH-ii-Vk5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDt-Ww-JUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="-766"/>
+        </scene>
+        <!--Tab Bar-->
+        <scene sceneID="pEo-Zf-mJh">
+            <objects>
+                <tabBarController id="Uqf-2z-IfC" userLabel="Tab Bar" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="X18-SC-cJp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="i17-XS-035" kind="relationship" relationship="viewControllers" id="laf-gL-USD"/>
+                        <segue destination="TwX-tZ-8Ec" kind="relationship" relationship="viewControllers" id="efP-8l-RUK"/>
+                        <segue destination="Wmx-8w-622" kind="relationship" relationship="viewControllers" id="BjF-Fm-4ba"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LIb-wd-2o7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="-766"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="0ce-eU-Zkx">
+            <objects>
+                <viewController id="Wmx-8w-622" userLabel="Info" customClass="InfoViewController" customModule="minesweeper_gorya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0W1-Oz-G55">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HaF-LS-XDt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Help" image="help-ms" id="tXE-As-RXd" userLabel="Info"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qWo-qy-Ub2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="-9"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Qga-FA-Uk5">
+            <objects>
+                <viewController id="TwX-tZ-8Ec" userLabel="Settings" customClass="SettingsViewController" customModule="minesweeper_gorya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tIN-Ku-d1D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QWY-b3-2Rq" userLabel="Main Stack">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SaP-lF-UEl" userLabel="Toggle Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="384.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GNK-0x-XAq" userLabel="Sound Stack">
+                                                <rect key="frame" x="20" y="20" width="374" height="69"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgo-ZM-Sq3" userLabel="Sound Label">
+                                                        <rect key="frame" x="0.0" y="24" width="187" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uB0-7v-YGF" userLabel="Switch Stack">
+                                                        <rect key="frame" x="187" y="19" width="187" height="31"/>
+                                                        <subviews>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="31Q-LZ-Xpv" userLabel="Sound Switch">
+                                                                <rect key="frame" x="69" y="0.0" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="soundOn:" destination="TwX-tZ-8Ec" eventType="valueChanged" id="6Nx-02-U50"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o3Z-8H-iF3" userLabel="Music Stack">
+                                                <rect key="frame" x="20" y="89" width="374" height="69"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZQ-bE-KXA" userLabel="Music Label">
+                                                        <rect key="frame" x="0.0" y="24" width="187" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9dq-AO-Wr0" userLabel="Switch Stack">
+                                                        <rect key="frame" x="187" y="19" width="187" height="31"/>
+                                                        <subviews>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0QF-S7-AGK" userLabel="Music Switch">
+                                                                <rect key="frame" x="69" y="0.0" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="musicOn:" destination="TwX-tZ-8Ec" eventType="valueChanged" id="eL7-9g-nKM"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cJj-jE-ZWD" userLabel="Safe Stack">
+                                                <rect key="frame" x="20" y="158" width="374" height="68.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safe first-move" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-GC-RPV" userLabel="Safe-first Label">
+                                                        <rect key="frame" x="0.0" y="24" width="187" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AyC-UQ-goP" userLabel="Switch Stack">
+                                                        <rect key="frame" x="187" y="19" width="187" height="31"/>
+                                                        <subviews>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-gv-Bwx" userLabel="Safefirst Switch">
+                                                                <rect key="frame" x="69" y="0.0" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="safeFirst:" destination="TwX-tZ-8Ec" eventType="valueChanged" id="kCw-Qb-9nn"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Wn-Ym-ZQH" userLabel="Undo Stack">
+                                                <rect key="frame" x="20" y="226.5" width="374" height="69"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Undo enabled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9d-jJ-aBp" userLabel="Undo Label">
+                                                        <rect key="frame" x="0.0" y="24.5" width="187" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rAM-r5-KM4" userLabel="Switch Stack">
+                                                        <rect key="frame" x="187" y="19" width="187" height="31"/>
+                                                        <subviews>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHk-tg-66Y" userLabel="Undo Switch">
+                                                                <rect key="frame" x="69" y="0.0" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="undoEnabled:" destination="TwX-tZ-8Ec" eventType="valueChanged" id="dq1-5Y-QzF"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-Z5-siX" userLabel="Double-tap Stack">
+                                                <rect key="frame" x="20" y="295.5" width="374" height="69"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double-tap to zoom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgQ-vd-ZEK" userLabel="Undo Label">
+                                                        <rect key="frame" x="0.0" y="24.5" width="187" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CcR-mF-qKB" userLabel="Switch Stack">
+                                                        <rect key="frame" x="187" y="19" width="187" height="31"/>
+                                                        <subviews>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kJo-HQ-pcc" userLabel="Double-tap Switch">
+                                                                <rect key="frame" x="69" y="0.0" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="doubleTapZoom:" destination="TwX-tZ-8Ec" eventType="valueChanged" id="1Xf-db-e3j"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HbZ-Pw-jo3" userLabel="Spinner Stack">
+                                        <rect key="frame" x="0.0" y="384.5" width="414" height="384.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3C2-TZ-1xJ" userLabel="Rows Stack">
+                                                <rect key="frame" x="20" y="20" width="374" height="86"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rows" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62R-5k-txr" userLabel="Rows Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="86"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idO-0T-DbT" userLabel="Rows Spinner">
+                                                        <rect key="frame" x="187" y="0.0" width="187" height="86"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-oq-jwR" userLabel="Columns Stack">
+                                                <rect key="frame" x="20" y="106" width="374" height="86.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Columns" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN4-0N-HF2" userLabel="Columns Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="86.5"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qK-wH-I5e" userLabel="Cols Spinner">
+                                                        <rect key="frame" x="187" y="0.0" width="187" height="86.5"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4SP-j4-h9u" userLabel="Mines Stack">
+                                                <rect key="frame" x="20" y="192.5" width="374" height="86"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mines" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaI-DW-eHz" userLabel="Mines Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="86"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJZ-QG-XBn" userLabel="Mines Spinner">
+                                                        <rect key="frame" x="187" y="0.0" width="187" height="86"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qsb-Kw-3nW" userLabel="Level Stack">
+                                                <rect key="frame" x="20" y="278.5" width="374" height="86"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ3-jK-SoE" userLabel="Level Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="86"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CF5-95-fAY" userLabel="Level Spinner">
+                                                        <rect key="frame" x="187" y="0.0" width="187" height="86"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="MZ3-jK-SoE" firstAttribute="width" secondItem="62R-5k-txr" secondAttribute="width" id="4pU-ks-mJU"/>
+                                            <constraint firstItem="ZN4-0N-HF2" firstAttribute="width" secondItem="62R-5k-txr" secondAttribute="width" id="De5-ui-Wa4"/>
+                                            <constraint firstItem="PaI-DW-eHz" firstAttribute="width" secondItem="62R-5k-txr" secondAttribute="width" id="Rvq-xN-2kj"/>
+                                            <constraint firstItem="CF5-95-fAY" firstAttribute="width" secondItem="idO-0T-DbT" secondAttribute="width" id="nQp-a5-08x"/>
+                                            <constraint firstItem="fJZ-QG-XBn" firstAttribute="width" secondItem="idO-0T-DbT" secondAttribute="width" id="psZ-Bu-mdX"/>
+                                            <constraint firstItem="2qK-wH-I5e" firstAttribute="width" secondItem="idO-0T-DbT" secondAttribute="width" id="pum-JM-0qL"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bqr-Np-6SA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QWY-b3-2Rq" firstAttribute="top" secondItem="Bqr-Np-6SA" secondAttribute="top" id="6Cy-wv-qf8"/>
+                            <constraint firstItem="QWY-b3-2Rq" firstAttribute="leading" secondItem="Bqr-Np-6SA" secondAttribute="leading" id="Nc2-Hy-rSY"/>
+                            <constraint firstItem="Bqr-Np-6SA" firstAttribute="bottom" secondItem="QWY-b3-2Rq" secondAttribute="bottom" id="hBP-zZ-ejb"/>
+                            <constraint firstItem="Bqr-Np-6SA" firstAttribute="trailing" secondItem="QWY-b3-2Rq" secondAttribute="trailing" id="qMr-tR-1gT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear-ms" id="1Zk-67-N5z"/>
+                    <connections>
+                        <outlet property="colsOutlet" destination="2qK-wH-I5e" id="Jig-77-iCM"/>
+                        <outlet property="doubleTapZoomOutlet" destination="kJo-HQ-pcc" id="42b-sO-NoL"/>
+                        <outlet property="levelOutlet" destination="CF5-95-fAY" id="rZw-Qb-TYg"/>
+                        <outlet property="minesOutlet" destination="fJZ-QG-XBn" id="OuX-XF-0xW"/>
+                        <outlet property="musicOnOutlet" destination="0QF-S7-AGK" id="hmP-cL-El1"/>
+                        <outlet property="rowsOutlet" destination="idO-0T-DbT" id="i5j-gc-iNT"/>
+                        <outlet property="safeFirstOutlet" destination="IUo-gv-Bwx" id="TO6-6K-0Z9"/>
+                        <outlet property="soundOnOutlet" destination="31Q-LZ-Xpv" id="7LG-XM-Vbh"/>
+                        <outlet property="undoEnabledOutlet" destination="KHk-tg-66Y" id="AGH-VX-oIm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UcU-3b-jzU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="-9"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear-ms" width="25" height="25"/>
+        <image name="grid-ms" width="25" height="25"/>
+        <image name="help-ms" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
