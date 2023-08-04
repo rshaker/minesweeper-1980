@@ -1,4 +1,4 @@
-# Minesweeper (1980)
+# Minesweeper 1980
 
 <div><img src="./assets/lighthouse.jpg" height="240px"/></div>
 
