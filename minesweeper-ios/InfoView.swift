@@ -68,6 +68,10 @@ struct InfoView: View {
                     Text("Most settings ⚙️ changes take effect on game reset or application restart.")
                     Text("There is no pause, but there is an undo. Safe first-move makes sure don't blow yourself up right away 😱 You'll be lucky to survive, just be happy with that 🌸")
                 }
+                Group {
+                    Text("Support").font(.title)
+                    Text("Source code and issue reporting available at https://github.com/rshaker/minesweeper-1980")
+                }
                 Spacer()
             }
             .padding()
